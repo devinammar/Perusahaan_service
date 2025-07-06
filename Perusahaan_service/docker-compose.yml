@@ -1,0 +1,45 @@
+version: '3.8'
+services:
+  service-node:
+    build: ./service_node
+    ports:
+      - "3001:3000"
+    depends_on:
+      - db
+
+  service-python:
+    build: ./service_python
+    ports:
+      - "3002:5000"
+    depends_on:
+      - db
+
+  service-go:
+    build: ./service_go
+    ports:
+      - "3003:8080"
+    depends_on:
+      - db
+
+  service-java:
+    build: ./service_java
+    ports:
+      - "3004:8080"
+    depends_on:
+      - db
+
+  service-php:
+    build: ./service_php
+    ports:
+      - "3005:80"
+    depends_on:
+      - db
+
+  db:
+    image: mysql:8.0
+    restart: always
+    environment:
+      MYSQL_ROOT_PASSWORD: rootpass
+      MYSQL_DATABASE: perusahaan
+    ports:
+      - "3399:3399"
