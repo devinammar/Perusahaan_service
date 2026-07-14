@@ -10,7 +10,7 @@ In this backend system, there are 5 service files with different languages and t
 - **service_php** (with PHP) : to handle the `"pendapatan_2024"` table in the database  
 - **service_python** (with Python language) : to handle the `"karyawan"` table in the database  
 
-**Note:**  
+**Notes:**  
 There are 2 files in this project:  
 - The database file named `perusahaan.sql`  
 - The backend file named `Perusahaan_service`
